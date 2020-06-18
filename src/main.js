@@ -7,13 +7,14 @@ import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 
-import { domain, clientId } from "../auth_config.json";
+import { domain, clientId, audience } from "../auth_config.json";
 
 Vue.config.productionTip = false;
 
 Vue.use(Auth0Plugin, {
   domain,
   clientId,
+  audience,
   onRedirectCallback: appState => {
     router.push(
       appState && appState.targetUrl
