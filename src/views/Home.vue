@@ -3,9 +3,13 @@
     <Farewell msg="Hi, DockerLead!" />
     <div v-if="!$auth.loading">
       <!-- show login when not authenticated -->
-      <b-button variant="success" v-if="!$auth.isAuthenticated" @click="login">Log in</b-button>
+      <b-button variant="success" v-if="!$auth.isAuthenticated" @click="login"
+        >Log in</b-button
+      >
       <!-- show logout when authenticated -->
-      <b-button variant="danger" v-if="$auth.isAuthenticated" @click="logout">Log out</b-button>
+      <b-button variant="danger" v-if="$auth.isAuthenticated" @click="logout"
+        >Log out</b-button
+      >
     </div>
   </div>
 </template>
@@ -35,7 +39,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  button {
-    margin: 2rem;
-  }
+button {
+  margin: 2rem;
+}
 </style>
